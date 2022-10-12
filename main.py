@@ -46,7 +46,7 @@ def loop_to_get_right_price(url, user, program, max_price):
             print("\npode comprar\n")
         else:
             print("\ncompra não, tá mt caro :P\n")
-        time.sleep(450)
+        time.sleep(900)
 
 
 def have_number(input):
