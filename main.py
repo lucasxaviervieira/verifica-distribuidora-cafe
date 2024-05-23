@@ -5,12 +5,18 @@ from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 
 
+def get_password():
+    with open('SECRET.txt', 'r') as file:
+        password = file.read().strip()
+    return password
+
+
 def send_email(user, program, price):
     msg = MIMEMultipart()
     message = (
         f"O café no plano {program} está disponível para a compra no valor de {price}"
     )
-    password = "fpfhocecpvnminbu"
+    password = get_password()
     msg["From"] = "python.message.to.tasks@gmail.com"
     msg["To"] = user
     msg["Subject"] = "CAFÉ - CAFÉ - CAFÉ"
