@@ -6,7 +6,7 @@ from email.mime.multipart import MIMEMultipart
 
 
 def get_password():
-    with open('SECRET.txt', 'r') as file:
+    with open("secret.txt", "r") as file:
         password = file.read().strip()
     return password
 
